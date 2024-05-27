@@ -1,0 +1,140 @@
+footer {
+    width: 100%;
+    max-height: 130px;
+    background-color: #1E1231;
+    border-radius: 64px 64px 0 0;
+    border: 4px solid $main-color;
+    border-block-end: none;
+    writing-mode: horizontal-tb;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px;
+    .info {
+        width: 600px;
+        max-height: 130px;
+        &__list {
+            margin: 80px 0 24px 0;
+            width: 600px;
+            display: flex;
+            flex-direction: row;
+            list-style-type: none;
+            justify-content: space-between;
+            &_item {
+                a {
+                    text-decoration: none;
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #fff;
+                }
+                .linck {
+                    text-decoration:underline;
+                    color: $main-color;
+                }
+            }
+        }
+    }
+
+    .social {
+        width: 316px;
+        margin-top: 40px;
+        text-align: right;
+        &__heading {
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 400;
+            color: #fff;
+        }
+
+        &__icon {
+            margin-top: 14px;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: end;
+            svg {
+                margin: 0 1px;
+                cursor: pointer;
+                &:hover {
+                    .hover-icon {
+                        fill: url(#paint0_linear_17903_201);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    footer {
+        max-height: 130px;
+        padding: 0 15px;
+        .info {
+            &__list {
+                width: 500px;
+            }
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    footer {
+        max-height: 130px;
+        padding: 0 15px;
+        .info {
+            width: 100%;
+            &__list {
+                max-width: 420px;
+                &_item {
+                    flex-wrap: wrap;
+                    a {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        .social {
+            width: 300px;
+            &__heading {
+                font-size: 14px;
+            }
+            &__icon {
+                svg {
+                    width: 27px;
+                    height: 27px;
+                    margin: 0 4px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 760px) {
+    footer {
+        max-height: 223px;
+        padding: 0 15px;
+        flex-direction: column;
+        .info {
+            &__list {
+                margin: 20px 5px;
+                max-width: 420px;
+                flex-direction: column;
+                &_item {
+                    flex-wrap: wrap;
+                    width: 270px;
+                    a {
+                        font-size: 14px;
+                    }
+                    .linck {
+                        text-decoration: none;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        .social {
+            width: 272px;
+            text-align: left;
+            margin: 0 5px;
+        }
+    }
+}

@@ -1,0 +1,281 @@
+header {
+    width: 100%;
+    height: 96px;
+    nav {
+        margin-top: 16px;
+        width: 100%;
+        height: 96px;
+        border: 4px solid $main-color;
+        border-radius: 64px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: center;
+        align-items: center;
+        .mediamenu {
+            display: none;
+        }
+        .listnavigation {
+            width: 588px;
+            display: flex;
+            flex-direction: row;
+            list-style-type: none;
+            justify-content: space-between;
+            &__item {
+                a {
+                    text-decoration: none;
+                    font-size: 16px;
+                    color: #fff;
+                    font-weight: 400;
+                }
+            }
+        }
+        .menu {
+            width: 287px;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            span {
+                color: #fff;
+                font-size: 12px;
+                font-weight: 400;
+                position: absolute;
+                border: 1px solid $border-button;
+                width: 30px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            .EN {
+                left: 40px;
+                top: 50px;
+                display: none;
+            }
+            .RU {
+                left: 9px;
+                top: 50px;
+                display: none;
+            }
+            &:hover {
+                .EN {
+                    display: block;
+                }
+                .RU {
+                    display: block;
+                }
+            }
+            &__button {
+                background: none;
+                width: 87px;
+                height: 48px;
+                border: 2px solid $border-button;
+                border-radius: 24px;
+
+                color: #fff;
+                font-size: 16px;
+                font-weight: 400;
+                cursor: pointer;
+            }
+            .language {
+                width: 75px;
+                img {
+                    margin-right: 8px;
+                }
+            }
+            .painted {
+                width: 97px;
+                border: none;
+                background-color: $main-color;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    header {
+        nav {
+            span {
+                display: none;
+            }
+            .listnavigation {
+                width: 500px;
+            }
+
+        }
+    }
+}
+@media (max-width: 900px) {
+    header {
+        nav {
+            .listnavigation {
+                width: 430px;
+                &__item {
+                    a {
+                        text-decoration: none;
+                        font-size: 15px;
+                        color: #fff;
+                        font-weight: 400;
+                    }
+                }
+            }
+            .menu {
+                width: 260px;
+                &__button {
+                    width: 80px;
+                    height: 40px;
+
+                    font-size: 15px;
+                }
+                .EN {
+                    left: 37px;
+                    top: 43px;
+                }
+                .RU {
+                    left: 6px;
+                    top: 43px;
+                }
+                .language {
+                    width: 70px;
+                    img {
+                        margin-right: 6px;
+                        width: 15px;
+                    }
+                }
+                .painted {
+                    width: 90px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    header {
+        nav {
+            .listnavigation {
+                width: 400px;
+                &__item {
+                    a {
+                        font-size: 14px;
+                    }
+                }
+            }
+            .menu {
+                width: 230px;
+                &__button {
+                    width: 70px;
+                    height: 38px;
+
+                    font-size: 14px;
+                }
+                .EN {
+                    left: 34px;
+                    top: 40px;
+                }
+                .RU {
+                    left: 0px;
+                    top: 40px;
+                }
+                .language {
+                    width: 60px;
+                    img {
+                        margin-right: 6px;
+                        width: 15px;
+                    }
+                }
+                .painted {
+                    width: 80px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    header {
+        nav {
+            height: 56px;
+            justify-content: end;
+            padding: 0 14px;
+            .listnavigation {
+                display: none;
+            }
+            .menu {
+                display: none;
+            }
+            .mediamenu {
+                display: flex;
+                width: 76px;
+                height: 36px;
+                justify-content: space-between;
+                &__button {
+                    width: 36px;
+                    height: 36px;
+                    background: none;
+                    border: 2px solid $border-button;
+                    border-radius: 100px;
+                    padding: 6px;
+                    img {
+                        width: 20px;
+                        height: 20px;
+                    }
+                    span {
+                        color: #fff;
+                        font-size: 12px;
+                        font-weight: 400;
+                        position: absolute;
+                        border: 1px solid $border-button;
+                        width: 30px;
+                        border-radius: 5px;
+                        cursor: pointer;
+                    }
+                    .EN {
+                        right: 126px;
+                        top: 35px;
+                        display: none;
+                    }
+                    .RU {
+                        right: 95px;
+                        top: 35px;
+                        display: none;
+                    }
+                    &:hover {
+                        .EN {
+                            display: block;
+                        }
+                        .RU {
+                            display: block;
+                        }
+                    }
+                }
+                &__humburgermenu {
+                    width: 36px;
+                    height: 36px;
+                    cursor: pointer;
+                    position:static;
+                    padding: 5px;
+                    position: relative;
+                    &_span {
+                        display: block;
+                        background-color: #ffffff;
+                        width: 21px;
+                        height: 2px;
+                        margin: 5px 0;
+                    }
+                    .center {
+                        display: none;
+                    }
+                    .top {
+                        position: absolute;
+                        margin-top: 13px;
+                        rotate: 45deg;
+                    }
+                    .bottom {
+                        position: absolute;
+                        margin-top: 13px;
+                        rotate: -45deg;
+                    }
+                }
+            }
+        }
+    }
+}
